@@ -34,7 +34,7 @@ function SignUp() {
 
   const onSubmit = async (data) => {
     await delay(2);
-    const res = await axios.post("http://localhost:3000/api/signup", {
+    const res = await axios.post("https://appjob-o3ho.onrender.com/api/signup", {
       username: data.username,
       email: data.email,
       organization: data.organization,

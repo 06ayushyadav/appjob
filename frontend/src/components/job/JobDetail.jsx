@@ -8,7 +8,7 @@ function JobDetail() {
     useEffect(() => {
         const fetchJob = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/upload-job/${id}`);
+                const response = await fetch(`https://appjob-o3ho.onrender.com/api/upload-job/${id}`);
                 const data = await response.json();
                 if (data.success) {
                     setJob(data.job);

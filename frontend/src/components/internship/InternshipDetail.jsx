@@ -8,7 +8,7 @@ function InternDetail() {
     useEffect(() => {
         const fetchInternship = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/upload-internship/${id}`);
+                const response = await fetch(`https://appjob-o3ho.onrender.com/api/upload-internship/${id}`);
                 const data = await response.json();
                 if (data.success) {
                     setIntern(data.intern);

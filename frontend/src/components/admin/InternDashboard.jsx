@@ -41,7 +41,7 @@ function InternDashboard() {
           formData.append("internlastdate", interns.lastdate);
           formData.append("internvideo", interns.vlink);
     
-          const res = await fetch("http://localhost:3000/api/upload-internship", {
+          const res = await fetch("https://appjob-o3ho.onrender.com/api/upload-internship", {
             method: "POST",
             body: formData,
             credentials: "include",

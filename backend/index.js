@@ -16,7 +16,7 @@ const _dirname=path.resolve();
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors({
-  origin: "http://localhost:5173",  
+  origin: "https://appjob-o3ho.onrender.com",  
   credentials: true                  
 }));
 

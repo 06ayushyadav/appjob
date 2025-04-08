@@ -35,7 +35,7 @@ function Login({ setAuth }) {
     const handleLogin = async (data) => {
         await delay(3)
         try {
-            const res = await axios.post("http://localhost:3000/api/login", data, {
+            const res = await axios.post("https://appjob-o3ho.onrender.com/api/login", data, {
                 withCredentials: true
             });
 

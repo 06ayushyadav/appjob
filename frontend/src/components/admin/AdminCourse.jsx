@@ -31,7 +31,7 @@ function AdminCourse() {
       formData.append("skilldescription", skill.description);
       formData.append("skillvideo", skill.video);
     
-      const res = await fetch("http://localhost:3000/api/upload-skill", {
+      const res = await fetch("https://appjob-o3ho.onrender.com/api/upload-skill", {
         method: "POST",
         body: formData,
         credentials: "include",

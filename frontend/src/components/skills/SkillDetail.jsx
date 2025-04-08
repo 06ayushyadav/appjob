@@ -1,51 +1,4 @@
-// import React, { useContext } from 'react'
-// import SkillsContext from '../../context/SkillContext'
-// import { useParams } from 'react-router-dom'
-// // import { h2, title } from 'framer-motion/client'
 
-
-// function OpenNow() {
-
-//     const {id}=useParams()
-//     const { skills } = useContext(SkillsContext)
-
-//     return (
-//         <div className='w-full h-screen bg-slate-200 flex flex-col  items-center mt-10' >
-
-//             <h2 className='mt-10'>Course Details and Tutorial Video</h2>
-//             <div className="skills">
-//                 {skills.map((skill, index) => (
-//                     <div key={index} className='skill'  >
-                        
-//                         <div className='mt-10'>
-//                         <h2>Course Name : {skill.title} </h2>
-//                         <h3>About Course : {skill.description}</h3>
-
-//                         </div>
-
-//                         <div className='w-1/2 h-1/2 mt-10'  >
-//                             <p>Full Tutorial Video :</p>
-//                             <video className=' rounded-lg border-2 border-blue-600 ' src={skill.video} controls ></video>
-                           
-//                         </div>
-
-                        
-
-//                         {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/h9gxbeEm9-w?si=M5W9JwSWb2e5GIA7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen={true} ></iframe>  */}
-//                     </div>
-
-//                 ))}
-
-//             </div>
-//             {/* params:{id} */}
-//         </div>
-        
-        
-
-//     )
-// }
-
-// export default OpenNow
 
 
 import React, { useEffect, useState } from "react";
@@ -58,7 +11,7 @@ function SkillDetail() {
     useEffect(() => {
         const fetchSkill = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/upload-skill/${id}`);
+                const response = await fetch(`https://appjob-o3ho.onrender.com/api/upload-skill/${id}`);
                 const data = await response.json();
                 if (data.success) {
                     setSkill(data.skill);

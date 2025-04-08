@@ -7,7 +7,7 @@ import { MdDelete } from "react-icons/md";
 const Card = ({ id, title, description, onDelete }) => {
     const handleDelete = async () => { 
         try {
-            const response = await fetch(`http://localhost:3000/api/delete-skill/${id}`, {
+            const response = await fetch(`https://appjob-o3ho.onrender.com/api/delete-skill/${id}`, {
                 method: "DELETE",
                 credentials: "include",
             
@@ -63,7 +63,7 @@ function skillCard() {
 
     const fetchSkill = async () => {
         try {
-            const response = await fetch("http://localhost:3000/api/upload-skill");
+            const response = await fetch("https://appjob-o3ho.onrender.com/api/upload-skill");
             const data = await response.json();
             if (data.success) {
                 setSkills(data.skills);

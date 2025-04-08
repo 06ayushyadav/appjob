@@ -46,7 +46,7 @@ function AdminDashboard() {
       formData.append("joblastdate", job.lastdate);
       formData.append("jobvideo", job.vlink);
 
-      const res = await fetch("http://localhost:3000/api/upload-job", {
+      const res = await fetch("https://appjob-o3ho.onrender.com/api/upload-job", {
         method: "POST",
         body: formData,
         credentials: "include",

@@ -7,7 +7,7 @@ import { MdDelete } from "react-icons/md";
 const Card = ({ id, title, skills,salary,org, onDelete }) => {
     const handleDelete = async () => { 
         try {
-            const response = await fetch(`http://localhost:3000/api/delete/${id}`, {
+            const response = await fetch(`https://appjob-o3ho.onrender.com/api/delete/${id}`, {
                 method: "DELETE",
                 credentials: "include",
             
@@ -65,7 +65,7 @@ function JobCard() {
 
     const fetchJobs = async () => {
         try {
-            const response = await fetch("http://localhost:3000/api/upload-job");
+            const response = await fetch("https://appjob-o3ho.onrender.com/api/upload-job");
             const data = await response.json();
             if (data.success) {
                 setJobs(data.jobs);

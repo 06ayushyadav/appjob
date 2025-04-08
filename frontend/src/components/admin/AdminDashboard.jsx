@@ -32,7 +32,7 @@ function AdminDashboard() {
     await delay(3)
     
     try {
-      await axios.get("http://localhost:3000/api/logout", {
+      await axios.get("https://appjob-o3ho.onrender.com/api/logout", {
         withCredentials: true
       });
       localStorage.removeItem("token");
