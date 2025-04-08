@@ -7,7 +7,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 import Navbar from './components/navbar/Navbar'
 import JobProvider from "./context/JobProvider";
 import InternProvider from './context/InternProvider'
-import SkillsProvider from './context/skillProvider'
+import SkillsProvider from './context/SkillProvider'
 import CommentProvider from '../src/context/CommentProvider'
 import SkillDetail from './components/skills/SkillDetail'
 import InternshipDetail from './components/internship/InternshipDetail'
