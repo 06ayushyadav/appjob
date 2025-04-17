@@ -34,7 +34,7 @@ const Card = ({ id, title, description, onDelete }) => {
                     <h2 className="text-xl font-semibold">Course Title : <span className="text-gray-800">{title} </span> </h2>
                 </div>
                 <div className='flex justify-start items-center mt-2 mx-3 text-lg'>
-                    <h3 className="text-lg font-medium">Course Description : <span className="text-gray-800">{description} </span> </h3>
+                    <h3 className="text-lg font-medium h-20 overflow-auto scrollbar-none ">Course Description : <span className="text-gray-800">{description} </span> </h3>
                 </div>
 
 

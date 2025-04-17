@@ -11,6 +11,8 @@ function Home() {
 
   return (
     <div className='w-full bg-blue-50'>
+
+    
       <PopupMessage />
       <Landing />
       <Cards />

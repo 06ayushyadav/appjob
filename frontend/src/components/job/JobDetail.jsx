@@ -92,7 +92,7 @@ function JobDetail() {
                         <strong className="text-base sm:text-base md:text-lg ">Video link for Form Filling:</strong>
                         <div className="mt-2">
                             <iframe
-                                className="w-1/2 h-fit rounded-lg shadow-md"
+                                className="w-full max-w-2xl h-80 rounded-lg shadow-md"
                                 src={convertToEmbedURL(job.jobvideo)}
                                 title="YouTube video player"
                                 frameBorder="0"
