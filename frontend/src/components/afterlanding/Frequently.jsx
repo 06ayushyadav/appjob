@@ -35,33 +35,36 @@ function Frequently() {
   ];
 
   return (
-    <div className="h-fit mb-20 flex-col justify-center px-4">
-      <div className="flex justify-center items-center text-4xl text-blue-950 mt-20 mb-10 font-serif text-center">
-        Frequently Asked Questions
-      </div>
+    <>
 
-      <div className="flex justify-center items-center gap-10 mb-10 flex-wrap w-full">
-        {questionsAndAnswers.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col justify-center items-center bg-orange-100 w-full sm:w-[80%] md:w-[40%] rounded-xl p-5 shadow-lg"
-          >
-            <div className="flex justify-between items-center w-full px-5">
-              <div className="text-2xl">{item.question}</div>
-              <button
-                className="bg-blue-500 rounded-lg px-3 py-1 text-2xl font-bold m-2 text-white hover:bg-blue-400 active:bg-blue-600 transition-all duration-200"
-                onClick={() => toggleAnswer(index)}
-              >
-                {answers[index] ? "-" : "+"}
-              </button>
+      <div className="h-fit mb-20 flex-col justify-center px-4">
+        <div className="flex justify-center items-center text-xl sm:text-xl md:text-3xl text-blue-950 mt-20 mb-10 font-serif text-center">
+          Frequently Asked Questions
+        </div>
+
+        <div className="flex justify-center items-center gap-10 mb-10 flex-wrap w-full">
+          {questionsAndAnswers.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col justify-center items-center bg-orange-100 w-full sm:w-[80%] md:w-[40%] rounded-xl p-5 shadow-lg"
+            >
+              <div className="flex justify-between items-center w-full px-5">
+                <div className="text-base sm:text-lg md:text-xl ">{item.question}</div>
+                <button
+                  className="bg-blue-500 rounded-lg px-3 py-1 text-base sm:text-lg md:text-xl font-bold m-2 text-white hover:bg-blue-400 active:bg-blue-600 transition-all duration-200"
+                  onClick={() => toggleAnswer(index)}
+                >
+                  {answers[index] ? "-" : "+"}
+                </button>
+              </div>
+              {answers[index] && (
+                <div className="text-base sm:text-lg md:text-xl text-left w-full px-5 mt-3">{item.answer}</div>
+              )}
             </div>
-            {answers[index] && (
-              <div className="text-xl text-left w-full px-5 mt-3">{item.answer}</div>
-            )}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

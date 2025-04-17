@@ -95,6 +95,22 @@ router.post('/login', async (req, res) => {
 });
 
 
+router.get('/login',isLoggedIn,async(req,res)=>{
+    try{
+        const userData=await user.findById(req.user._id);
+        if(!userData){
+            return res.status(404).json({success:false,message:"User not found"})
+        }
+        res.json({success:true,user:userData})
+
+    }catch(error){
+        console.log("user not available",error);
+        res.status(500).json({ success: false, message: "Internal Server Error" });
+
+    }
+})
+
+
 router.get('/logout', (req, res) => {
     res.cookie("token", "", {
         httpOnly: true,

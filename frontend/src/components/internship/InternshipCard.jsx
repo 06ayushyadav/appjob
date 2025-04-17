@@ -26,32 +26,34 @@ const Card = ({ id, title, skills, salary, org, onDelete }) => {
     };
 
     return (
-        <div className='w-80 h-auto rounded-lg border border-blue-600 mt-5 shadow-xl'>
+        <>
+            <div className='w-80 h-auto rounded-lg border border-blue-600 mt-5 shadow-xl'>
 
-            <div className='flex justify-start items-center mt-4 mx-3 text-lg'>
-                <h2 className="text-xl font-semibold">Internship Title :<span  className="text-gray-800">{title} </span> </h2>
-            </div>
-            <div className='flex justify-start items-center mt-2 mx-3 text-lg'>
-                <h3 className="text-lg font-medium">Internship Skills : <span  className="text-gray-800">{skills} </span> </h3>
-            </div>
-            <div className='flex justify-start items-center mt-2 mx-3 text-lg'>
-                <h3 className="text-lg font-medium">Internship Salary : <span  className="text-gray-800">{salary} </span> </h3>
-            </div>
-            <div className='flex justify-start items-center mt-2 mx-3 text-lg'>
-                <h3 className="text-lg font-medium">Organization : <span  className="text-gray-800">{org} </span> </h3>
-            </div>
+                <div className='flex justify-start items-center mt-4 mx-3 text-lg'>
+                    <h2 className="text-xl font-semibold">Internship Title :<span className="text-gray-800">{title} </span> </h2>
+                </div>
+                <div className='flex justify-start items-center mt-2 mx-3 text-lg'>
+                    <h3 className="text-lg font-medium">Internship Skills : <span className="text-gray-800">{skills} </span> </h3>
+                </div>
+                <div className='flex justify-start items-center mt-2 mx-3 text-lg'>
+                    <h3 className="text-lg font-medium">Internship Salary : <span className="text-gray-800">{salary} </span> </h3>
+                </div>
+                <div className='flex justify-start items-center mt-2 mx-3 text-lg'>
+                    <h3 className="text-lg font-medium">Organization : <span className="text-gray-800">{org} </span> </h3>
+                </div>
 
-            <div className='flex justify-center items-center gap-10 mt-5'>
-                <Link
-                    className='bg-blue-500 rounded-lg px-2 py-1 font-semibold text-white text-base mb-2 hover:text-blue-500 hover:bg-white hover:border-blue-600 border-2'
-                    to={`/internship/${id}`}>View Details</Link>
+                <div className='flex justify-center items-center gap-10 mt-5'>
+                    <Link
+                        className='bg-blue-500 rounded-lg px-2 py-1 font-semibold text-white text-base mb-2 hover:text-blue-500 hover:bg-white hover:border-blue-600 border-2'
+                        to={`/internship/${id}`}>View Details</Link>
 
 
-                <button className="mb-3" onClick={handleDelete}>
-                <MdDelete className="w-10 h-8 text-blue-600 hover:text-red-600" title="Delete Skill" />
-                </button>
+                    <button className="mb-3" onClick={handleDelete}>
+                        <MdDelete className="w-10 h-8 text-red-600" title="Delete Internship" />
+                    </button>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
@@ -81,7 +83,7 @@ function InternshipCard() {
             }
         } catch (error) {
             console.error("Error fetching interns:", error);
-            setInterns([]); 
+            setInterns([]);
         }
     };
 

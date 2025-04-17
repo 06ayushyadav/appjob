@@ -6,7 +6,6 @@ import Frequently from '../components/afterlanding/Frequently'
 import Footer from '../components/footer/Footer'
 import PopupMessage from './PopMessage'
 
-
 function Home() {
   
 
